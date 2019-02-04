@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 
-var todoSchema = mongoose.Schema({
+var todoSchema = new mongoose.Schema({
     name:{
         type: String,
         required:'Name cannot be blank'
@@ -18,7 +18,7 @@ var todoSchema = mongoose.Schema({
 
 var Todo = mongoose.model('Todo', todoSchema);
 
-module.export = Todo;
+module.exports = Todo;
 //name
 
 //completed
